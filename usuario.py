@@ -3,4 +3,7 @@ from abc import ABC, abstractmethod
 class Usuario(ABC):
 
     def __init__(self) -> None:
-        super().__init__()
+        self._nombre = None
+        self._apellido = None
+        self._email = None
+        self._contrasenia = None
