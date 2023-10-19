@@ -1,3 +1,4 @@
+from usuario import *
 salir = False
 
 while salir == False:
