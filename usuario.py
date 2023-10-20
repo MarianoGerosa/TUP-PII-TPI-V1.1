@@ -3,10 +3,10 @@ from abc import ABC, abstractmethod
 class Usuario(ABC):
 
     def __init__(self, nombre, apellido, email, contrasenia) -> None:
-        self._nombre = None
-        self._apellido = None
-        self._email = None
-        self._contrasenia = None
+        self._nombre = nombre
+        self._apellido = apellido
+        self._email = email
+        self._contrasenia = contrasenia
 
     @property
     def nombre(self) -> str:
@@ -43,6 +43,7 @@ class Usuario(ABC):
     def __str__(self) -> str:
         return f"{self._nombre} {self._apellido} {self._email} {self._contrasenia}"
 
+    
     def validarEmailContasenia(self, email:str, contrasenia:str) -> bool:
         return (contrasenia == self._contrasenia and email == self._email)
     
