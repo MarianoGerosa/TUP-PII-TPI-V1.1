@@ -41,8 +41,12 @@ class Estudiante(Usuario):
         #             print("Se a añadido el curso a su lista de cursos")
         #             print(self.__mis_cursos)
 
-
-                
+    def verCursos(self):
+        if self.__mis_cursos:
+            for curso in self.__mis_cursos:
+                print(f"Materia: {curso[0]} Carrera: {curso[1]}")
+        else:
+            print("No estás matriculado en ningún curso.")
                     
 
                     

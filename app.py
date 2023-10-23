@@ -3,10 +3,11 @@ from estudiante import *
 import funcionesListas as fl  
 import os
 import curso as cu 
+import subMenuAlumno as sma
+import subMenuProfesor as smp
+
 
 salir = False
-
-
 while salir == False:
     print("\n--- Menú ---")
     print("1. Ingresar como alumno")
@@ -28,42 +29,11 @@ while salir == False:
         if usuario_valido:
             os.system('cls')
             print(f"Bienvenido, {usuario_valido.nombre}!")
-            salir2 = False
-            while salir2 == False:
-                print("\n--- Sub Menú Alumno ---")
-                print("1. Matricularse en un curso")
-                print("2. Ver cursos")
-                print("3. Volver al menú principal")
-
-                opc = int(input("Ingrese una opcion: "))
-
-                if opc == 1:
-                    os.system('cls')
-                    print("\n--- Lista de materias ---")
-                    print(f"1. Ingles I")
-                    print(f"2. Ingles II")
-                    print(f"3. Laboratorio I")
-                    print(f"4. Laboratorio II")
-                    print(f"5. Programación I")
-                    print(f"6. Programación II")
-
-                    opc = int(input("Ingrese una opcion: "))
-                    # estudiante = Estudiante()
-                    # estudiante.matricular_en_curso(opc)
-                    estudiante.matricular_en_curso(opc)
-
-
-                elif opc == 2:
-                    pass
-                elif opc == 3:
-                    salir2 = True
-                    os.system('cls')
-                else:
-                    print("Opcion no valida")
+            sma.subMenuAlumnos(Estudiante)
         else:
             os.system('cls')
             print("Error de ingreso, verifique su email y contraseña.")
-
+                
     elif opc == 2:
         email = input("Ingrese su email: ")
         contrasenia = input("Ingrese su contraseña: ")
@@ -75,24 +45,7 @@ while salir == False:
         if usuario_valido:
             os.system('cls')
             print(f"Bienvenido, {usuario_valido.nombre}!")
-            salir2 = False
-            while salir2 == False:
-                print("\n--- Sub Menú Profesor ---")
-                print("1. Dictar curso")
-                print("2. Ver curso")
-                print("3. Volver al menú principal")
-
-                opc = int(input("\nIngrese una opcion: "))
-
-                if opc == 1:
-                    pass
-                elif opc == 2:
-                    pass
-                elif opc == 3:
-                    salir2 = True
-                    os.system('cls')
-                else:
-                    print("Opcion no valida")
+            smp.subMenuProfesor()
         else:
             os.system('cls')
             print("Error de ingreso, verifique su email y contraseña.")

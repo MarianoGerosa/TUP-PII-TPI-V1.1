@@ -9,3 +9,5 @@ class curso():
 
     def generar_contrasenia_matriculacion(self):
         return
+    
+    
