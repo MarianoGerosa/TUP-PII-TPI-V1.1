@@ -1,10 +1,9 @@
 from usuario import *
+import funcionesListas as fl  
 import os
 
 salir = False
-alumnos_registrados = [Usuario("a", "a", "a", "a"), Usuario("b", "b", "b", "b")]
-profesores_registrados = [Usuario("c", "c", "c", "c"), Usuario("d", "d", "d", "d")]
-lista_cursos = {'materia':'Ingles I'}
+
 
 while salir == False:
     print("\n--- Menú ---")
@@ -20,7 +19,7 @@ while salir == False:
         email = input("Ingrese su email: ")
         contrasenia = input("Ingrese su contraseña: ")
         usuario_valido = None
-        for usuario in alumnos_registrados:
+        for usuario in fl.alumnos_registrados:
             if usuario.validarEmailContasenia(email, contrasenia):
                 usuario_valido = usuario
                 break
@@ -37,7 +36,14 @@ while salir == False:
                 opc = int(input("Ingrese una opcion: "))
 
                 if opc == 1:
-                    pass
+                    print(f"1. Programación I")
+                    print(f"2. Programación II")
+                    print(f"3. Laboratorio I")
+                    print(f"4. Laboratorio II")
+                    print(f"5. Ingles I")
+                    print(f"6. InglesII")
+
+
                 elif opc == 2:
                     pass
                 elif opc == 3:
@@ -53,7 +59,7 @@ while salir == False:
         email = input("Ingrese su email: ")
         contrasenia = input("Ingrese su contraseña: ")
         usuario_valido = None
-        for usuario in profesores_registrados:
+        for usuario in fl.profesores_registrados:
             if usuario.validarEmailContasenia(email, contrasenia):
                 usuario_valido = usuario
                 break

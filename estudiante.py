@@ -6,6 +6,7 @@ class Estudiante(Usuario):
         super().__init__()
         self.__legajo = legajo
         self.__anio_inscripcion_carrera = anioInscripcionCarrera
+        self.__mis_cursos = []
 
     def __str__(self) -> str:
         return f"{self.__legajo} {self.__anio_inscripcion_carrera}"

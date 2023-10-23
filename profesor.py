@@ -6,6 +6,8 @@ class Profesor(Usuario):
         super().__init__()
         self.__titulo = titulo
         self.__anio_egreso = anioEgreso
+        self.__mis_cursos = []
+
 
     def dictar_curso(self, curso:curso):
         self.curso = curso
