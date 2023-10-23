@@ -4,6 +4,7 @@ import os
 salir = False
 alumnos_registrados = [Usuario("a", "a", "a", "a"), Usuario("b", "b", "b", "b")]
 profesores_registrados = [Usuario("c", "c", "c", "c"), Usuario("d", "d", "d", "d")]
+lista_cursos = {'materia':'Ingles I'}
 
 while salir == False:
     print("\n--- Menú ---")
@@ -33,7 +34,7 @@ while salir == False:
                 print("2. Ver cursos")
                 print("3. Volver al menú principal")
 
-                opc = int(input("\Ingrese una opcion: "))
+                opc = int(input("Ingrese una opcion: "))
 
                 if opc == 1:
                     pass
@@ -80,6 +81,7 @@ while salir == False:
         else:
             os.system('cls')
             print("Error de ingreso, verifique su email y contraseña.")
+            print("Para darse de alta, acercarse a alumnado")
     elif opc == 3:
         pass
     elif opc == 4:
