@@ -2,7 +2,7 @@ from usuario import *
 from estudiante import *
 import funcionesListas as fl  
 import os
-import curso as cu
+import curso as cu 
 
 salir = False
 
@@ -39,7 +39,18 @@ while salir == False:
 
                 if opc == 1:
                     os.system('cls')
-                    matricular_en_curso()
+                    print("\n--- Lista de materias ---")
+                    print(f"1. Ingles I")
+                    print(f"2. Ingles II")
+                    print(f"3. Laboratorio I")
+                    print(f"4. Laboratorio II")
+                    print(f"5. Programación I")
+                    print(f"6. Programación II")
+
+                    opc = int(input("Ingrese una opcion: "))
+                    # estudiante = Estudiante()
+                    # estudiante.matricular_en_curso(opc)
+                    estudiante.matricular_en_curso(opc)
 
 
                 elif opc == 2:
