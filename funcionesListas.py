@@ -2,7 +2,7 @@ from usuario import *
 from curso import *
 from estudiant import *
 
-alumnos_registrados = [Estudiante("a", "a", "a", "a", 1, 1998, ["Ingles I"]) , Usuario("b", "b", "b", "b")]
+alumnos_registrados = [Usuario("a", "a", "a", "a") , Usuario("b", "b", "b", "b")]
 profesores_registrados = [Usuario("c", "c", "c", "c"), Usuario("d", "d", "d", "d")]
 lista_cursos = [curso("Ingles I", "12"), curso("Ingles II", "13"), curso("Laboratorio I", "14"), curso("Laboratorio II", "15"), curso("Programacion I", "16"), curso("Programacion II", "17")]
 
