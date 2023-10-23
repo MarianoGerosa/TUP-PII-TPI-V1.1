@@ -1,6 +1,8 @@
 from usuario import *
+from estudiante import *
 import funcionesListas as fl  
 import os
+import curso as cu
 
 salir = False
 
@@ -36,12 +38,8 @@ while salir == False:
                 opc = int(input("Ingrese una opcion: "))
 
                 if opc == 1:
-                    print(f"1. Programación I")
-                    print(f"2. Programación II")
-                    print(f"3. Laboratorio I")
-                    print(f"4. Laboratorio II")
-                    print(f"5. Ingles I")
-                    print(f"6. InglesII")
+                    os.system('cls')
+                    matricular_en_curso()
 
 
                 elif opc == 2:
@@ -89,7 +87,10 @@ while salir == False:
             print("Error de ingreso, verifique su email y contraseña.")
             print("Para darse de alta, acercarse a alumnado")
     elif opc == 3:
-        pass
+        for curso in fl.listaCursosImprimir:
+            print(f"Materia: {curso['Materia']}      Carrera: {curso['Carrera']}")
+
+
     elif opc == 4:
         print("Hasta luego!")
         salir = True
