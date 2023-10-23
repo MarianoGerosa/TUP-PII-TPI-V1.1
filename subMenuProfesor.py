@@ -1,7 +1,7 @@
 import os
 from profesor import *
 
-def subMenuProfesor (self):
+def subMenuProfesor ():
     salir2 = False
     while salir2 == False:
         print("\n--- Sub Menú Profesor ---")
@@ -12,7 +12,8 @@ def subMenuProfesor (self):
         opc = int(input("\nIngrese una opcion: "))
 
         if opc == 1:
-            pass
+            os.system('cls')
+            Profesor.dictar_curso(None)
         elif opc == 2:
             pass
         elif opc == 3:

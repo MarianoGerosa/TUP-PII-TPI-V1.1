@@ -2,18 +2,45 @@ from usuario import Usuario
 from curso import *
 import funcionesListas as fl
 
+
+
+
 class Estudiante(Usuario):
-    def __init__(self, legajo:int, anioInscripcionCarrera:int) -> None:
-        super().__init__()
+    def __init__(self, legajo:int, anioInscripcionCarrera:int, nombre, apellido, email, contrasenia) -> None:
+        super().__init__(self,nombre, apellido, email, contrasenia)
         self.__legajo = legajo
         self.__anio_inscripcion_carrera = anioInscripcionCarrera
         self.__mis_cursos = []
-    @property
-    def __str__(self) -> str:
-        return f"{self.__legajo} {self.__anio_inscripcion_carrera}"
     
 
+    @property
+    def legajo(self):
+        return self.__legajo
     
+    @legajo.setter
+    def asiganarLegajo(self, legajo):
+        self.__legajo = legajo
+
+    @property
+    def anio_inscripcion_carrera(self):
+        return self.__anio_inscripcion_carrera
+    
+    @anio_inscripcion_carrera.setter
+    def asiganarAnio_inscripcion_carrera(self, anio):
+        self.__anio_inscripcion_carrera = anio
+
+    @property
+    def mis_cursos(self):
+        return self.__mis_cursos
+    
+    @mis_cursos.setter
+    def asiganarMis_cursos(self, curso):
+        self.__mis_cursos = curso
+
+    def __str__(self) -> str:
+        return f"{self.__legajo} {self.__anio_inscripcion_carrera}"
+
+
     # def matricular_en_curso(self, opc):
     #     self.curso = curso
 
@@ -41,12 +68,9 @@ class Estudiante(Usuario):
         #             print("Se a añadido el curso a su lista de cursos")
         #             print(self.__mis_cursos)
 
+    
     def verCursos(self):
-        if self.__mis_cursos:
-            for curso in self.__mis_cursos:
-                print(f"Materia: {curso[0]} Carrera: {curso[1]}")
-        else:
-            print("No estás matriculado en ningún curso.")
+        return self.__mis_cursos
                     
 
                     

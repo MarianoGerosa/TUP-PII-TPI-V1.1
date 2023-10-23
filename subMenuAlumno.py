@@ -1,7 +1,8 @@
+from usuario import *
 import os
-from estudiante import *
+from estudiant import *
 
-def subMenuAlumnos(self) -> str:
+def subMenuAlumnos() -> str:
     salir2 = False
     while salir2 == False:
         print("\n--- Sub Menú Alumno ---")

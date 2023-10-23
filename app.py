@@ -1,5 +1,5 @@
 from usuario import *
-from estudiante import *
+from estudiant import *
 import funcionesListas as fl  
 import os
 import curso as cu 
@@ -29,12 +29,13 @@ while salir == False:
         if usuario_valido:
             os.system('cls')
             print(f"Bienvenido, {usuario_valido.nombre}!")
-            sma.subMenuAlumnos(Estudiante)
+            sma.subMenuAlumnos()
         else:
             os.system('cls')
             print("Error de ingreso, verifique su email y contraseña.")
                 
     elif opc == 2:
+        os.system('cls')
         email = input("Ingrese su email: ")
         contrasenia = input("Ingrese su contraseña: ")
         usuario_valido = None
