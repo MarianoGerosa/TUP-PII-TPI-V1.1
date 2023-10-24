@@ -2,7 +2,6 @@ from usuario import *
 from estudiant import *
 import funcionesListas as fl  
 import os
-import curso as cu 
 import subMenuAlumno as sma
 import subMenuProfesor as smp
 

@@ -3,11 +3,9 @@ from curso import *
 import funcionesListas as fl
 
 
-
-
 class Estudiante(Usuario):
     def __init__(self, legajo:int, anioInscripcionCarrera:int, nombre, apellido, email, contrasenia) -> None:
-        super().__init__(self,nombre, apellido, email, contrasenia)
+        super().__init__(nombre, apellido, email, contrasenia)
         self.__legajo = legajo
         self.__anio_inscripcion_carrera = anioInscripcionCarrera
         self.__mis_cursos = []
