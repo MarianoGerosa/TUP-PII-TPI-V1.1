@@ -1,5 +1,6 @@
-from usuario import *
-from estudiant import *
+from usuario import Usuario
+from estudiant import Estudiante
+from estudiant import alumnos_registrados
 import funcionesListas as fl  
 import os
 import subMenuAlumno as sma
@@ -21,7 +22,7 @@ while salir == False:
         email = input("Ingrese su email: ")
         contrasenia = input("Ingrese su contraseña: ")
         usuario_valido = None
-        for usuario in fl.alumnos_registrados:
+        for usuario in alumnos_registrados:
             if usuario.validarEmailContasenia(email, contrasenia):
                 usuario_valido = usuario
                 break

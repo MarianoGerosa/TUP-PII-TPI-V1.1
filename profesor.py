@@ -1,5 +1,5 @@
-from usuario import *
-from curso import *
+from usuario import Usuario
+from curso import curso
 
 class Profesor(Usuario):
     def __init__(self, titulo:str, anioEgreso:int, nombre, apellido, email, contrasenia ):
@@ -45,4 +45,4 @@ class Profesor(Usuario):
     
    
         
-        
+profesores_registrados = [Usuario("c", "c", "c", "c"), Usuario("d", "d", "d", "d")]

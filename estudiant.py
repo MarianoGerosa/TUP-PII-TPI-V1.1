@@ -1,6 +1,6 @@
 from usuario import Usuario
-from curso import *
-import funcionesListas as fl
+# from curso import *
+from curso import lista_cursos
 
 
 class Estudiante(Usuario):
@@ -43,11 +43,13 @@ class Estudiante(Usuario):
     #     self.curso = curso
 
     def matricular_en_curso(self, opc):
+            print("opc")
+            print(opc)
             if opc in self.__mis_cursos:
                 print("Usted ya está inscripto en este curso")
             else:
                 contra = input("Ingrese la contraseña de matriculación: ")
-                cursoElegido = fl.lista_cursos[opc]
+                cursoElegido = lista_cursos[opc]
             if contra == cursoElegido[1]:
                 self.__mis_cursos.append(fl.lista_cursos[opc])
                 print("Se ha añadido el curso a su lista de cursos")
@@ -71,7 +73,8 @@ class Estudiante(Usuario):
         return self.__mis_cursos
                     
 
-                    
+alumnos_registrados = [Estudiante("a", "a", "a", "a","s",[0,1]) , Estudiante("b", "b", "b", "b", "E", [])]
+                
 
 
 

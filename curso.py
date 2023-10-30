@@ -28,3 +28,4 @@ class curso():
         cod = ''.join(random.choice(characters) for i in range(8))
         return cod
     
+lista_cursos = [curso("Ingles I", "12"), curso("Ingles II", "13"), curso("Laboratorio I", "14"), curso("Laboratorio II", "15"), curso("Programacion I", "16"), curso("Programacion II", "17")]

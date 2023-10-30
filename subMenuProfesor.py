@@ -1,5 +1,5 @@
 import os
-from profesor import *
+from profesor import Profesor
 
 def subMenuProfesor ():
     salir2 = False

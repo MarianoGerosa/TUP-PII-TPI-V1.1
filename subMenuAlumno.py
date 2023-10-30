@@ -1,4 +1,4 @@
-from usuario import *
+# from usuario import *
 import os
 from estudiant import Estudiante
 
@@ -23,7 +23,7 @@ def subMenuAlumnos() -> str:
             print(f"6. Programación II")
 
             opc = int(input("Ingrese una opcion: "))
-            Estudiante.matricular_en_curso(opc)
+            Estudiante.matricular_en_curso(None,opc)
         elif opc == 2:
             Estudiante.verCursos()
         elif opc == 3:
